@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: burlywood;">
+    <!-- Note Body tag above is using Inline method -->
+
+    <!-- CSS has 3 methods: Inline; Internal; External -->
+    <!-- Inline -->
+
+    <h1 style="color: red">This is INLINE CSS METHOD</h1>
+
+    <p style="color: seagreen;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis quibusdam ut temporibus dolorem, sequi ipsum necessitatibus.</p>
+    <p style="color: seagreen;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ratione modi sapiente dicta nulla adipisci, aut eum deleniti eos quidem est impedit maxime eveniet nobis facere asperiores pariatur officia delectus.</p>
+    <img src="image_css/inline_method.png" height="200px" alt="inline_method">
+
+    <br>
+    <hr style="border-color: black;">
+
+    <!-- Internal - use style tag in HTML -->
+    <!-- style tag should be put in head to render the entire website -->
+    <!-- However, in this case, I put it here to separate between method -->
+
+    <style>
+        #interanl_head {
+            color: blue;
+        }
+        #internal_para_1 {
+            color: darkmagenta;
+        }
+        #internal_para_2 {
+            color: darkmagenta;
+        }
+    </style>
+
+    <h1 id="interanl_head">This is INTERNAL CSS METHOD</h1>
+
+    <p id="internal_para_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus reiciendis quibusdam ut temporibus dolorem, sequi ipsum necessitatibus.</p>
+    <p id="internal_para_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ratione modi sapiente dicta nulla adipisci, aut eum deleniti eos quidem est impedit maxime eveniet nobis facere asperiores pariatur officia delectus.</p>
+    <img src="image_css/internal_method.png" height="350px" alt="internal_method">
+    <br>
+    <pre>To prevent conflicting between h1 tag and p tag from Inline method. I use ID to distinguish between them</pre>
+
+    <hr style="border-color: black;">
+
+    <!-- External - use .css file -->
+    <!-- External method use another .css file (usually named style.css) to make the configuration for HTML -->
+    <!-- Need use link tag to interact between .css file and .html file -->
+    <h1>This is EXTERNAL CSS METHOD</h1>
+
+    <pre> Remember the hierarchy -- External 1st --> Internal 2nd --> Inline </pre>
+    <pre> That means configuration of file .css first, then configuration of Internal style tag (if there is no id to distinguish), then finally the Inline code</pre>
+    <pre><b>The paragraph below does not have any Inline and style tag not applies, so it uses the style from .css file</b></pre>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque nam veniam expedita.</p>
+
+    <img src="image_css/external_method.png" height="200px" alt="external_method">
+
+</body>
+</html>
