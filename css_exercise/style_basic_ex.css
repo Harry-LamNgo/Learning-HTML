@@ -1,0 +1,51 @@
+/* This is the way to use the font file .ttf ---with this use do not need reference link font in html file*/
+@font-face{
+    src: url(fonts/RobotoCondensed-Light.ttf);
+    font-family: RobotoCondensed-Light;
+}
+
+
+h1{
+    font-family: "RobotoCondensed-Light", verdana, Arial;
+    /* font-family in css file usually have backup (fallback) for font, in case the browser do not support one of the font */
+    /* In this case Arial is the backup if verdana is not supported */
+}
+p{
+    font-family: "lucida console", "Courier New";
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* This is Border CSS learning */
+
+#border-head{
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+    /* or you can write */
+    /* border: 3px solid red; */
+
+    border-radius: 20px;
+
+}
+#p1{
+    border-bottom: 3px solid brown;
+    border-top: 3px solid rgb(255, 255, 35);
+    border-left: 3px dotted greenyellow;
+    border-right: 3px dotted darkorchid;
+
+    border-radius: 10px;
+}
+
+#shadow_head{
+    /* You can add two or more shadows to 1 text, but they must separate between comma "," */
+    /* Text shadow attribute - 1st:horizontal offset - 2nd:vertical - 3rd:blur  */
+    text-shadow: 4px 6px 7px #00b7ff, -4px -5px 7px #9d56e0
+}
+#box1{
+    width: 200px;
+    height: 150px;
+    background-color: rgb(182, 158, 158);
+    box-shadow: 10px 5px 6px;
+}
