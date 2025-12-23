@@ -1,0 +1,44 @@
+/* descendant is name of class for div */
+hr{
+    border-color: blueviolet;
+}
+
+.descendant{
+    border: 2px solid
+}
+
+img{
+    padding-left: 20px;
+}
+
+/* In this case means "div p" */
+/*Explain: find all p elements in descendant div (do not care if p element is in another div or else) and apply background-color  */
+
+.descendant p{
+    background-color: yellow;
+}
+
+/* des-child is name of id for div */
+/* In this case means "div > p" */
+/* Explain: find all p elements which are DIRECTLY under des-child div (no p elements under OTHER div - even that div is in des-child div. Apply Background-color for child of des-child div*/
+#des-child > p{
+    background-color: rgb(236, 167, 155);
+}
+
+/* div_1 is name of ID for div */
+/* In this case means "div ~ p" */
+/* Explain: find all p elements which are SAME LEVEL (siblings) as id div_1 and apply background-color */
+#div_1 ~ p{
+    background-color: rgb(79, 238, 158);
+}
+
+
+/* div_2 is name of class for div */
+/* In this case means "div + p"  */
+/* Explain: find all p elements which are SAME LEVEL (siblings) and must be NEXT TO id div_2 and apply background-color */
+.div_2 + p{
+    background-color: darkkhaki;
+}
+
+
+

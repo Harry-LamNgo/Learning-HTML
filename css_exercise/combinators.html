@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator CSS</title>
+    <link rel="stylesheet" href="style_combinator.css">
+</head>
+<body>
+    <!-- combinators = explain the relationship between listed selectors -->
+    
+    <!-- space             ( ) = descendant-->
+    <!-- greater-than sign (>) = child -->
+    <!-- plus sign         (+) = adjacent/next siblings-->
+    <!-- wavy or squiggly  (~) = general siblings / select all elements that are next sibligns of a specified elements -->
+
+    <h2>Descendant Combinator</h2>
+
+    <pre style="padding:6px 10px">there are many descendant locations so I use class to give 2 div have same "descendant"</pre>
+
+    <div class="descendant">
+        <p>This 1st line is in the div</p>
+        <p>This 2nd line is in the div</p>
+        <div>
+            <p>This is a special line (still p element), it is in another div before in the descendant div</p>
+        </div>
+    </div>
+    <p>This 3rd line is NOT in the div</p>
+    
+    <div class="descendant">
+        <p>This 4th line is in the div</p>
+    </div>
+    <br>
+    <img src="image_css/descendant_combinator.png" height="240px" alt="descendant_combinator">
+
+    
+    <hr>
+
+    <h2>Child Combinator</h2>
+
+    <div id="des-child">
+        <p>I'm the 1st child of div have id name <b>des-child</b></p>
+        <p>I'm the 2nd child of div have id name <b>des-child</b></p>
+        <div>
+            <p>I'm the grand-child of div have id name <b>des-child</b> (in another div)</p>
+        </div>
+        <p>I'm the 3rd child of div have id name <b>des-child</b></p>
+    </div>
+
+    <p>I'm not child to div have id name <b>des-child</b></p>
+
+    <img src="image_css/child_combinator.png" height="200px" alt="child_combinator">
+    <br>
+    <hr>
+
+    <h2>Subsequent-sibling / General Siblings Combinator</h2>
+
+    <div id="div_1">
+        <p>This 1st line is in div</p>
+    </div>
+
+    <p>This 2nd line is not in div (But has the same level as id div_1) ~ this p is the sibling of id div_1</p>
+
+    <div>
+        This 3rd line is in div and it is div itself (It's has the SAME level as id div_1 But we are looking for p elements not div elememt)
+    </div>
+
+    <p>This 4th line is not in div (But has the same level as id div_1) ~ this p is the sibling of id div_1</p>
+    
+    <img src="image_css/general_sibling_combinator.png" height="240px" alt="general_sibling_combinator">
+
+    <br>
+    <hr>
+
+    <pre style="background-color:#a3c2f1; padding:6px 10px; white-space:pre-wrap">Because the code <b>#div_1 ~ p affect all p elements from div_1 to all</b>. So I need to put whole Adjacent siblings / Next Siblings Combinator part in new div named Adjacent-siblings to separate the p elements</pre>
+
+    <div class="Adjacent-siblings">
+        <h2>Adjacent siblings / Next Siblings Combinator</h2>
+
+        <pre style="padding:6px 10px">there are many div_2 locations so I use class to give 2 div have same "div_2"</pre>
+        <div class="div_2">
+            <p>Random paragraph in class div_2</p>
+        </div>
+        
+        <p>This is a paragraph next to class div_2 (in html)</p>
+        <p>This is a paragraph not next to class div_2 (in html - look the image dude)</p>
+
+        <div class="div_2">
+            <p>I'm child of class div_2</p>
+        </div>
+        <p>I'm not child of div_2 but I am <b>STAND next to</b> div_2 (in html)</p>
+        <p>I'm not child of div_2 but I am <b>NOT stand next to</b> div_2 (in html)</p>
+    </div>
+    
+    <br>
+    <img src="image_css/adjacent_sibling_combinator.png" height="240px" alt="adjacent_sibling_combinator">
+
+
+</body>
+</html>
