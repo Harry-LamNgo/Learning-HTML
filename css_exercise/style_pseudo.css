@@ -1,0 +1,35 @@
+a:link{
+    color: rgb(9, 150, 138);
+}
+a:hover{
+    color: coral;
+    font-size: 1.3em;
+}
+a:visited{
+    color: darkgreen
+}
+
+li:hover{
+    background-color: tomato;
+}
+li:not(:hover){
+    background-color: rgb(187, 179, 179);
+}
+
+
+/* Use :nth-child when you need make specific line (such as line at number that can divide to 3 - 3n) has specific feature */
+
+/* remove comment to see what this affect */
+/* li:nth-child(3n+1){
+    background-color: rgb(241, 241, 125);
+} */
+
+
+#hello p{
+    background-color: azure;
+    padding: 10px;
+    display: none;
+}
+#hello:hover p{
+    display: block;
+}
