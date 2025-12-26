@@ -8,14 +8,28 @@ a:hover{
 a:visited{
     color: darkgreen
 }
+/* ======= Update December 26 - 2025 for <li> tag ======= */
+/* 
+    Because there is a new html file that also used the style_pseudo.css
+    I need to distinguish the <li> tag to not apply this new file
+    => I need to update the 'li:hover' and 'li:not(:hover)' to ensure they are not apply the background-color to specific <ul id="fruits"> in new html file.
+*/
 
-li:hover{
+/* Explain the new code */
+
+/* ul:not(#fruits) li:hover 
+--> When user hovers over a list item (li) that is a descendant of <ul> which does NOT have the id "fruits", Apply this style */
+ul:not(#fruits) li:hover{
     background-color: tomato;
 }
-li:not(:hover){
+
+/* ul:not(#fruits) li:not(:hover)
+---> When user does NOT hover over a list item (li) that is a descendant of <ul> which does NOT have the id "fruits", Apply this style */
+ul:not(#fruits) li:not(:hover){
     background-color: rgb(187, 179, 179);
 }
 
+/* ======= Update December 26 - 2025  ======= */
 
 /* Use :nth-child when you need make specific line (such as line at number that can divide to 3 - 3n) has specific feature */
 
@@ -24,7 +38,6 @@ li:not(:hover){
     background-color: rgb(241, 241, 125);
 } */
 
-
 #hello p{
     background-color: azure;
     padding: 10px;
@@ -32,4 +45,41 @@ li:not(:hover){
 }
 #hello:hover p{
     display: block;
+}
+
+/* ======= Update December 26 - 2025 for Pseudo Elements ======= */
+/* Pseudo Elements */
+#heading_1::first-letter
+{
+    font-size: 2em;
+    font-style: italic;
+}
+
+#para_1::first-line{
+    background-color: aquamarine;
+}
+
+#para_1::selection{
+    color: pink;
+    background-color: darkslategrey;
+}
+
+#fruits li::before{
+    /* content: "✔️"; */
+}
+
+#apple::after{
+    content: "🍎";
+}
+#banana::after{
+    content: "🍌";
+}
+#orange::after{
+    content: "🍊";
+}
+
+#fruits li::marker{
+    content: "✓";
+    color: rgb(150, 223, 42);
+    font-size: 1.5em;
 }
