@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(22, 99, 22);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: rgb(42, 148, 42);
+}
+
+/* You can also use display: inline-block --- it will show the same
+as float: left (but do not need overflow: hidden in .navbar ul)
+And the navigation bar will have a bit more space between li elements */
+/* .navbar li{
+    display: inline-block;
+} */
+ 
+.navbar li{
+    float: left;
+}

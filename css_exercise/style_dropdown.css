@@ -1,0 +1,66 @@
+/* Explain:
+    This is for dropdown menu do not take whole line of webpage
+    Because .dropdown is div - block level.
+*/
+.dropdown{
+    display: inline-block;
+}
+
+/* Explain:
+    This is for <button> in .dropdown to have its own style
+*/
+
+.dropdown button{
+    background-color: rgb(209, 189, 241);
+    color: darkblue;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Explain:
+    This is for all <a> elements in .dropdown to have their own style
+    Important - display: block if you want elements <a> are stacked Vertically.
+                display: inline-block if you want elements <a> are stacked Horizontally.
+*/
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+
+}
+
+/* Explain:
+    This is for all .content div in .dropdown to have their own style
+    Important - display: none, because you don't want the content
+                               display when there is no interaction.
+                position: absolute, because you want the content 
+                                of dropdown menu occupy the space of main content.
+*/
+.dropdown .content{
+    display: none;
+    background-color: rgb(179, 142, 238);
+    position: absolute;
+    min-width: 150px;
+    box-shadow: 2px 2px 5px rgb(77, 76, 76);
+}
+
+/* Explain:
+    All codes below are for the state of each element you want to apply (like hover)
+    Important - .dropdown:hover .content now need display: block
+                because above display is none, so to show content of menu - you need to change the display to show
+*/
+
+.dropdown:hover .content{
+    display: block;
+}
+
+.dropdown:hover button{
+    background-color: rgb(179, 142, 238);
+}
+
+.dropdown a:hover{
+    background-color: rgb(152, 100, 236);
+}
